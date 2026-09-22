@@ -1,0 +1,43 @@
+\begin{table}[H]
+  \centering
+  \caption{Task BRS: full vs. reduced structured-data models, evaluated on AUC and stratified by cohort (Combined = full test set, n=169; B = Erasmus Cohort B, n=89; U = Urolife Cohort U, n=80). \textit{Legend: $\Delta$AUC = AUC(Full) $-$ AUC(Reduced), positive values indicate the full model outperformed the reduced model; shown only for the three teams that submitted a reduced (non-image-derived-features) model, -- otherwise. All CIs are 95\% percentile intervals from a paired patient-level bootstrap (10,000 resamples; full and reduced models evaluated on the identical resampled patients in each replicate); p\_adj = two-sided bootstrap p-value for the difference, Benjamini-Hochberg corrected across all full-vs-reduced comparisons in this table. $^{\dagger}$ on the B/U cohort label indicates AUC(B) differs significantly from AUC(U) for the full model (independent bootstrap, since cohort B and U are disjoint patient populations; FDR-adjusted $p<0.05$, corrected across all teams).}}
+  \begin{adjustbox}{width=1\textwidth}
+  \begin{tabular}{llcccc}
+  \textbf{Team} & \textbf{Cohort} & \textbf{AUC (Full) [95\% CI]} & \textbf{AUC (Reduced) [95\% CI]} & \textbf{$\Delta$AUC [95\% CI]} & \textbf{p\_adj} \\
+  \hline
+  \multirow{3}{*}{BioToTem} & Combined & 0.733 [0.641, 0.817] & 0.706 [0.610, 0.794] & +0.027 [-0.014, 0.069] & 0.884 \\
+   & B & 0.739 [0.607, 0.859] & 0.682 [0.533, 0.820] & +0.057 [-0.005, 0.119] & 0.670 \\
+   & U & 0.729 [0.596, 0.847] & 0.721 [0.586, 0.842] & +0.008 [-0.047, 0.062] & 0.984 \\
+  \hline
+  \multirow{3}{*}{GRIS} & Combined & 0.703 [0.613, 0.787] & -- & -- & -- \\
+   & B & 0.666 [0.538, 0.788] & -- & -- & -- \\
+   & U & 0.746 [0.618, 0.862] & -- & -- & -- \\
+  \hline
+  \multirow{3}{*}{BUAA-REMEX} & Combined & 0.745 [0.657, 0.825] & 0.742 [0.655, 0.824] & +0.003 [-0.029, 0.035] & 0.984 \\
+   & B & 0.746 [0.621, 0.857] & 0.756 [0.628, 0.870] & -0.010 [-0.055, 0.034] & 0.984 \\
+   & U & 0.750 [0.622, 0.863] & 0.749 [0.616, 0.868] & +0.001 [-0.046, 0.052] & 0.984 \\
+  \hline
+  \multirow{3}{*}{CADGEN-BIIT} & Combined & 0.622 [0.526, 0.716] & -- & -- & -- \\
+   & B & 0.617 [0.464, 0.763] & -- & -- & -- \\
+   & U & 0.624 [0.493, 0.748] & -- & -- & -- \\
+  \hline
+  \multirow{3}{*}{WL} & Combined & 0.589 [0.490, 0.687] & -- & -- & -- \\
+   & B & 0.568 [0.417, 0.713] & -- & -- & -- \\
+   & U & 0.600 [0.463, 0.732] & -- & -- & -- \\
+  \hline
+  \multirow{3}{*}{MITEL-UNIUD} & Combined & 0.672 [0.581, 0.761] & 0.668 [0.575, 0.755] & +0.004 [-0.043, 0.049] & 0.984 \\
+   & B & 0.719 [0.592, 0.832] & 0.716 [0.594, 0.829] & +0.003 [-0.066, 0.072] & 0.984 \\
+   & U & 0.638 [0.493, 0.777] & 0.641 [0.499, 0.775] & -0.004 [-0.077, 0.071] & 0.984 \\
+  \hline
+  \multirow{3}{*}{HKKH} & Combined & 0.675 [0.578, 0.766] & -- & -- & -- \\
+   & B & 0.661 [0.524, 0.788] & -- & -- & -- \\
+   & U & 0.749 [0.616, 0.867] & -- & -- & -- \\
+  \hline
+  \multirow{3}{*}{Aillis} & Combined & 0.696 [0.602, 0.783] & -- & -- & -- \\
+   & B & 0.691 [0.558, 0.815] & -- & -- & -- \\
+   & U & 0.766 [0.644, 0.874] & -- & -- & -- \\
+  \hline
+  \end{tabular}
+  \end{adjustbox}
+  \label{tab:task2_robustness_nif_unified_auc}
+\end{table}
